@@ -1,0 +1,31 @@
+<config>
+  <!-- Folding Slot Configuration -->
+  <!-- 'advanced' or 'beta'. beta implies advanced. Give feedback if you have beta errors -->
+  <!-- put the client type in a <slot> </slot> if you have a slow cpu but fast gpu -->
+  <client-type v='beta'/>
+
+  <!-- HTTP Server -->
+  <allow v='127.0.0.1;192.168.1.2-192.168.1.250'/>
+
+  <!-- Network -->
+  <proxy v=':8080'/>
+
+  <!-- Remote Command Server -->
+  <password v='password1234'/>
+
+  <!-- Slot Control -->
+  <power v='full'/>
+
+  <!-- User Information -->
+  <passkey v='passkey'>
+  <team v='team#'/>
+  <user v='username'/>
+
+  <!-- Folding Slots -->
+  <!--hold back 1 cpu to manage amd cards, and 1 cpu per nVidia-->
+  <slot id='0' type='CPU'>
+    <cpus v='3'/>
+  </slot>
+  <slot id='1' type='GPU'/>
+  <slot id='2' type='GPU'/>
+</config>
